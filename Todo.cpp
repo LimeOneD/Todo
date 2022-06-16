@@ -21,7 +21,8 @@ void add()
 
 	
 	ofstream ofs;
-	ofs.open("Todo.txt", std::ios_base::app | std::ios_base::in);
+	ofs.open("Todo.txt", std::ios_base::app);
+	if (ofs.is_open())
 	ofs << id<< deadline << task << endl;
 	ofs.close();
 	
@@ -65,7 +66,7 @@ void display()
 	       string deadline = s.substr(2,4);
 	       string task = s.substr(6);
 
-		 std::cout<< "|"<< " " << "Task ID" << " " <<  " " << "|" << " " << "Task description" << " " << "|" << " " << "Task deadline(ddmm)" << " " << "|" << " " << std::endl;
+		 
 	       std::cout<< "|"<< " " << id << " " <<  " " << "|" << " " << task << " " << "|" << " " << deadline << " " << "|" << " " << std::endl;
 	}
 }
@@ -98,6 +99,7 @@ int main()
 		{
 			help();
 			cout<<endl<<endl;
+			std::cout<< "|"<< " " << "Task ID" << " " <<  " " << "|" << " " << "Task description" << " " << "|" << " " << "Task deadline(ddmm)" << " " << "|" << " " << std::endl;
 			display();
 			cout<<endl<<endl;
 			main();
@@ -106,6 +108,7 @@ int main()
 		{
 			add();
 			cout<<endl<<endl;
+			std::cout<< "|"<< " " << "Task ID" << " " <<  " " << "|" << " " << "Task description" << " " << "|" << " " << "Task deadline(ddmm)" << " " << "|" << " " << std::endl;
 			display();
 			cout<<endl<<endl;
 			main();
@@ -116,6 +119,7 @@ int main()
 		{
 			del();
 			cout<<endl<<endl;
+			std::cout<< "|"<< " " << "Task ID" << " " <<  " " << "|" << " " << "Task description" << " " << "|" << " " << "Task deadline(ddmm)" << " " << "|" << " " << std::endl;
 			display();
 			cout<<endl<<endl;
 			main();
