@@ -16,7 +16,7 @@ void add()
 	cin>> id;
 
 	string deadline;
-	cout << "Enter the deadline " << endl;
+	cout << "Enter the deadline (ddmm) " << endl;
 	cin >>deadline;
 
 	
@@ -64,6 +64,8 @@ void display()
 	       string id = s.substr(0,2);
 	       string deadline = s.substr(2,4);
 	       string task = s.substr(6);
+
+		 std::cout<< "|"<< " " << "Task ID" << " " <<  " " << "|" << " " << "Task description" << " " << "|" << " " << "Task deadline(ddmm)" << " " << "|" << " " << std::endl;
 	       std::cout<< "|"<< " " << id << " " <<  " " << "|" << " " << task << " " << "|" << " " << deadline << " " << "|" << " " << std::endl;
 	}
 }
@@ -72,7 +74,7 @@ void display()
 
 void help()
 {
-	cout<< "help"<<endl;
+	cout << "help" <<endl;
 }
 
 
