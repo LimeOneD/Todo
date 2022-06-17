@@ -63,11 +63,12 @@ void display()
 
 	{
 	       string id = s.substr(0,2);
-	       string deadline = s.substr(2,4);
+	       string deadlined = s.substr(2,2);
+		string deadlinem = s.substr(4,2);
 	       string task = s.substr(6);
 
 		 
-	       std::cout<< "|"<< " " << id << " " <<  " " << "|" << " " << task << " " << "|" << " " << deadline << " " << "|" << " " << std::endl;
+	       std::cout<< "|"<< " " << id << " " <<  " " << "|" << " " << task << " " << "|" << " " << deadlined<< "-" << deadlinem << " " << "|" << " " << std::endl;
 	}
 }
 
@@ -82,16 +83,22 @@ void help()
 int main()
 {
 	
-
+	
 	std::cout<< "[h] Help" << std::endl;
 	std::cout<< "[e] Eneter new task" << std::endl;
 	std::cout<< "[d] Delete task" << std::endl;
 	std::cout<< "[q] Quit" << std::endl<<endl<<endl;
-	
-	//display();
+	cout<<"====================================================";
+	cout<<endl;
+	std::cout<< "|"<< " " << "Task ID" << " " <<  " " << "|" << " " << "Task description" << " " << "|" << " " << "Task deadline(ddmm)" << " " << "|" << " " << std::endl;
+	display();
 
 	cout<<endl<<endl;	
+
 	
+	cout<<"====================================================";cout<<endl;
+	cout<<"====================================================";
+	cout<<endl;
 	cout<< "Enter your choice"<< endl;
 	char s; std::cin>>s;
 
@@ -99,18 +106,21 @@ int main()
 		{
 			help();
 			cout<<endl<<endl;
-			std::cout<< "|"<< " " << "Task ID" << " " <<  " " << "|" << " " << "Task description" << " " << "|" << " " << "Task deadline(ddmm)" << " " << "|" << " " << std::endl;
-			display();
-			cout<<endl<<endl;
+			
+			cout<<"====================================================";cout<<endl;
+			cout<<"====================================================";
+	
+			cout<<endl;
 			main();
 		}
 		else if(s=='e')
 		{
 			add();
 			cout<<endl<<endl;
-			std::cout<< "|"<< " " << "Task ID" << " " <<  " " << "|" << " " << "Task description" << " " << "|" << " " << "Task deadline(ddmm)" << " " << "|" << " " << std::endl;
-			display();
-			cout<<endl<<endl;
+			cout<<"====================================================";cout<<endl;
+			cout<<"====================================================";
+			cout<<endl;
+
 			main();
 		}
 
@@ -119,9 +129,10 @@ int main()
 		{
 			del();
 			cout<<endl<<endl;
-			std::cout<< "|"<< " " << "Task ID" << " " <<  " " << "|" << " " << "Task description" << " " << "|" << " " << "Task deadline(ddmm)" << " " << "|" << " " << std::endl;
-			display();
-			cout<<endl<<endl;
+			cout<<"====================================================";cout<<endl;
+			cout<<"====================================================";
+			cout<<endl;
+
 			main();
 		}
 		
